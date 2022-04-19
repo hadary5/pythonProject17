@@ -1,0 +1,21 @@
+use musixmatch to query.
+query the
+1. lyrics according to arg (car is default arg)
+2. lyrics in english
+3. included in release date prior to 1-1-2010
+
+supposed to be list of songs with the wanted arg in the lyric
+
+data model (saved in csv)
+
+song_name,performer_name,album_name,song share url
+
+#####################
+create docker exposes a service
+-- use flask to wrap the above script create
+-- implement POST
+--output to stdout
+return csv file
+# forward request and error logs to docker log collector
+RUN ln -sf /dev/stdout /var/log/nginx/access.log \
+    && ln -sf /dev/stderr /var/log/nginx/error.log
