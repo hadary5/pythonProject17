@@ -15,7 +15,9 @@ create docker exposes a service
 -- use flask to wrap the above script create
 -- implement POST
 --output to stdout
-return csv file
+return csv file (example with log)
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
+
+https://github.com/hudsonbrendon/python-musixmatch
